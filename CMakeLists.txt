@@ -3,12 +3,12 @@ project(TutorialQT)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp)
+set(SOURCE_FILES main.cpp BasisWindow.h BasisWindow.cxx)
 
 # configuration for Qt
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
-set(CMAKE_AUTOMOC OFF)
-set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOUIC OFF)
 
 
 # dependency
@@ -20,9 +20,6 @@ find_package(Qt5Multimedia)
 get_target_property(QtCore_location Qt5::Multimedia LOCATION)
 find_package(Qt5Widgets)
 get_target_property(QtCore_location Qt5::Widgets LOCATION)
-
-find_package(Qt5Charts)
-get_target_property(QtCore_location Qt5::Charts LOCATION)
 
 
 
